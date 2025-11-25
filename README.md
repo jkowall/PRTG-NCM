@@ -26,7 +26,7 @@ A unified Network Configuration and Change Management (NCCM) tool designed to in
 1.  **Clone the repository**:
     ```bash
     git clone <repository-url>
-    cd PRTG\ NCM
+    cd PRTG-NCM
     ```
 
 2.  **Set up Virtual Environment**:
