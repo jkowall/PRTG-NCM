@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Device Inventory</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Hostname</th>
+            <th>IP Address</th>
+            <th>Vendor</th>
+            <th>Protocol</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for device in devices %}
+        <tr>
+            <td>{{ device.hostname }}</td>
+            <td>{{ device.ip_address }}</td>
+            <td>{{ device.vendor }}</td>
+            <td>{{ device.protocol }}</td>
+            <td>
+                <a href="{{ url_for('main.device_detail', device_id=device.id) }}"
+                    class="btn btn-sm btn-primary">View</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

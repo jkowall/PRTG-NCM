@@ -1,0 +1,8 @@
+flask
+sqlalchemy
+flask-sqlalchemy
+celery
+redis
+netmiko
+cryptography
+python-dotenv

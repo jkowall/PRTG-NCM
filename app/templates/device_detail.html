@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ device.hostname }} ({{ device.ip_address }})</h2>
+<p>Vendor: {{ device.vendor }} | Protocol: {{ device.protocol }}</p>
+
+<form action="{{ url_for('main.trigger_backup', device_id=device.id) }}" method="POST" class="mb-4">
+    <button type="submit" class="btn btn-success">Run Backup Now</button>
+</form>
+
+<h3>Configuration Backups</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Timestamp</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for backup in backups %}
+        <tr>
+            <td>{{ backup.timestamp }}</td>
+            <td>
+                <a href="{{ url_for('main.view_diff', backup_id=backup.id) }}" class="btn btn-sm btn-info">View Diff</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

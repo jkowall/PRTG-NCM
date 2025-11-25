@@ -1,0 +1,69 @@
+:root {
+    --prtg-blue: #002d5a;
+    --prtg-green: #b4d500;
+    --prtg-light-gray: #f0f3f5;
+    --prtg-text: #333;
+}
+
+body {
+    background-color: var(--prtg-light-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--prtg-text);
+}
+
+.navbar {
+    background-color: var(--prtg-blue) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--prtg-green);
+    border-color: var(--prtg-green);
+    color: var(--prtg-blue);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #9cb800;
+    border-color: #9cb800;
+    color: var(--prtg-blue);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.table thead th {
+    background-color: var(--prtg-blue);
+    color: white;
+    border-bottom: 3px solid var(--prtg-green);
+}
+
+h2, h3 {
+    color: var(--prtg-blue);
+    margin-bottom: 1.5rem;
+}
+
+.diff-added {
+    background-color: #e6ffec;
+    color: #155724;
+}
+
+.diff-removed {
+    background-color: #ffebe9;
+    color: #721c24;
+}
