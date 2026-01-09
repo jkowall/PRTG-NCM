@@ -6,3 +6,5 @@ redis
 netmiko
 cryptography
 python-dotenv
+requests
+urllib3
