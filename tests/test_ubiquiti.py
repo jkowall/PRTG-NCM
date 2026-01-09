@@ -61,7 +61,7 @@ class TestUbiquitiBackup(unittest.TestCase):
             hostname='UniFi-Controller',
             ip_address='192.168.1.10',
             vendor='ubiquiti_unifi',
-            protocol='ssh',  # Not used for API
+            protocol='api',  # Note: Protocol field not used for API-based devices
             username='ncm-backup',
             password_encrypted='secret',
             enable_secret_encrypted='default'
