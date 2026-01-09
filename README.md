@@ -12,6 +12,8 @@ A unified Network Configuration and Change Management (NCCM) tool designed to in
     - Cisco IOS / IOS-XE
     - Huawei VRP
     - Fortinet FortiGate
+    - Ubiquiti UniFi (API)
+    - Ubiquiti EdgeOS (SSH)
     - (Extensible via Driver Factory)
 - **Web Interface**: Clean, responsive UI with PRTG-inspired branding.
 
@@ -127,6 +129,21 @@ Access the web interface at: `http://127.0.0.1:5001`
 1.  Navigate to "Add Device".
 2.  Enter the Hostname, IP, Vendor, and Credentials.
 3.  The device will be added to the inventory.
+
+#### Ubiquiti UniFi Controller Setup
+
+For UniFi Controllers, you must create a **dedicated read-only administrator account** in the UniFi Controller web interface. This account is used by the NCM script to access the API without making changes to your network.
+
+**Important parameters for UniFi:**
+- **IP Address**: UniFi Controller IP or hostname (the script will connect to `https://<ip>:8443`)
+- **Vendor**: `ubiquiti_unifi` or `unifi`
+- **Username**: Read-only admin account username
+- **Password**: Read-only admin account password
+- **Enable Secret/Site ID**: (Optional) UniFi Site ID - defaults to `default` if not specified
+
+For detailed setup instructions, see the [Ubiquiti Setup Guide](docs/ubiquiti-setup.md).
+
+**Note**: The current UniFi driver supports Legacy UniFi Controllers. UDM/UDM-Pro (UniOS) devices may require minor API endpoint adjustments.
 
 ### Viewing Diffs
 

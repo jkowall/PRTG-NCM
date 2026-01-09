@@ -1,0 +1,93 @@
+{
+  "devices": {
+    "data": [
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d0e",
+        "adopted": true,
+        "mac": "fc:ec:da:11:22:33",
+        "model": "US24P250",
+        "name": "Office-Switch-01",
+        "type": "usw",
+        "version": "6.2.14.13659",
+        "ip": "192.168.1.10",
+        "state": 1,
+        "config_network": {
+          "type": "dhcp"
+        }
+      },
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d0f",
+        "adopted": true,
+        "mac": "f0:9f:c2:44:55:66",
+        "model": "U6-Lite",
+        "name": "Office-AP-01",
+        "type": "uap",
+        "version": "5.60.9.13098",
+        "ip": "192.168.1.11",
+        "state": 1
+      }
+    ],
+    "meta": {
+      "rc": "ok"
+    }
+  },
+  "networks": {
+    "data": [
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d10",
+        "name": "Corporate",
+        "purpose": "corporate",
+        "vlan": 10,
+        "dhcp_enabled": true,
+        "dhcp_start": "192.168.10.10",
+        "dhcp_stop": "192.168.10.254",
+        "domain_name": "company.local",
+        "ip_subnet": "192.168.10.0/24",
+        "networkgroup": "LAN"
+      },
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d11",
+        "name": "Guest",
+        "purpose": "guest",
+        "vlan": 20,
+        "dhcp_enabled": true,
+        "dhcp_start": "192.168.20.10",
+        "dhcp_stop": "192.168.20.254",
+        "ip_subnet": "192.168.20.0/24",
+        "networkgroup": "LAN",
+        "guest_portal_enabled": true
+      }
+    ],
+    "meta": {
+      "rc": "ok"
+    }
+  },
+  "settings": {
+    "data": [
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d12",
+        "key": "mgmt",
+        "site_id": "default",
+        "auto_upgrade": false,
+        "led_enabled": true
+      },
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d13",
+        "key": "connectivity",
+        "site_id": "default",
+        "uplink_type": "gateway",
+        "x_mesh_essid": "company-mesh"
+      },
+      {
+        "_id": "5f8a1b2c3d4e5f6a7b8c9d14",
+        "key": "ntp",
+        "site_id": "default",
+        "ntp_server_1": "0.ubnt.pool.ntp.org",
+        "ntp_server_2": "1.ubnt.pool.ntp.org"
+      }
+    ],
+    "meta": {
+      "rc": "ok"
+    }
+  }
+}
